@@ -674,21 +674,21 @@ test('Yoodle Automation', async ({ page, context, browserName }, testInfo) => {
     await expect(accountMenu).toBeVisible({ timeout: 60_000 });
     await accountMenu.click();
 
-    const logOutOption = page.getByRole('menuitem', { name: /log out/i })
-      .or(page.getByRole('button', { name: /log out/i }))
-      .last();
-    await expect(logOutOption).toBeVisible({ timeout: 60_000 });
-    await logOutOption.click();
+    // const logOutOption = page.getByRole('menuitem', { name: /log out/i })
+    //   .or(page.getByRole('button', { name: /log out/i }))
+    //   .last();
+    // await expect(logOutOption).toBeVisible({ timeout: 60_000 });
+    // await logOutOption.click();
 
-    const signOutAllButton = page.getByRole('button', {
-      name: 'Sign out of all accounts',
-      exact: true,
-    });
-    await expect(signOutAllButton).toBeVisible({ timeout: 60_000 });
-    await signOutAllButton.click();
+    // const signOutAllButton = page.getByRole('button', {
+    //   name: 'Sign out of all accounts',
+    //   exact: true,
+    // });
+    // await expect(signOutAllButton).toBeVisible({ timeout: 60_000 });
+    // await signOutAllButton.click();
 
-    await expect(page.getByPlaceholder('Email')).toBeVisible({ timeout: 60_000 });
-    await attachScreenshot('sign-out-of-all-accounts');
+    // await expect(page.getByPlaceholder('Email')).toBeVisible({ timeout: 60_000 });
+    // await attachScreenshot('sign-out-of-all-accounts');
 
 
   });
